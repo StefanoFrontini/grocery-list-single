@@ -2,7 +2,7 @@ version : "3"
 services:
   listaspesa:
     container_name: listaspesa
-    image: stefanofrontini/listaspesa:latest
+    image: stefanofrontini/spesa:latest
     restart: always
     ports:
       - "8080:8080"
