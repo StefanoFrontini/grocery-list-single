@@ -1,7 +1,7 @@
-FROM node:16-bullseye-slim
+FROM node:16-bullseye-slim as build
 
 # install simple http server for serving static content
-RUN npm install -g http-server
+#RUN npm install -g http-server
 
 # make the 'app' folder the current working directory
 WORKDIR /app
@@ -20,5 +20,10 @@ COPY . .
 # build app for production with minification
 RUN npm run build
 
-EXPOSE 8080
-CMD [ "http-server", "dist" ]
+FROM nginx
+#COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+#CMD [ "http-server", "dist" ]
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
