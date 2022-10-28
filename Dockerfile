@@ -24,4 +24,4 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80
 #CMD [ "http-server", "dist" ]
-CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+#CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
