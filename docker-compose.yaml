@@ -1,10 +1,10 @@
-version : "2"
+version : "3"
 services:
   listaspesa:
-  container_name: listaspesa
-  image: stefanofrontini/listaspesa:latest
-  restart: always
-  ports:
-    - "8080:8080"
+    container_name: listaspesa
+    image: stefanofrontini/listaspesa:latest
+    restart: always
+    ports:
+      - "8080:8080"
 networks:
   - listaspesa
