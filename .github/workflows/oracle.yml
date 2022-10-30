@@ -44,6 +44,5 @@ jobs:
           stack_file_name: docker-compose.yaml
           keep_files: 5
           args: up -d
-          pre_deployment_command_args: "sudo docker compose down"
           docker_prune: "false"
           pull_images_first: "true"
