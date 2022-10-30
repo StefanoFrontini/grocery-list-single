@@ -33,7 +33,7 @@ jobs:
       #     tags: stefanofrontini/spesa:latest
 
       - name: Deploy to Docker Host
-        uses: StefanoFrontini/docker-deployment-action@v1.0.1
+        uses: StefanoFrontini/docker-deployment-action@v1.0.2
         with:
           remote_docker_host: ubuntu@129.152.12.94
           ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
