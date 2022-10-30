@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="text-center">Lista della spesa up</h1>
+    <h1 class="text-center">Lista della spesa down</h1>
 
     <form @submit.prevent="addTodo">
       <div class="form-group">
